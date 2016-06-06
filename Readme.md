@@ -1,14 +1,14 @@
 # A project, A language
 
 ## Gramática del lenguaje
-Un programa consta de lista de declaraciones.
+Un programa consta de una lista de declaraciones.
 
 ```haskell
 program
     = declaration+
 ```
 
-Donde una declaraciones, puede se una variable, constante o función
+Donde las declaraciones, pueden ser una variable, constante o función
 ```haskell
 declaration "declaration of var, const or function"
     = variable
@@ -34,8 +34,8 @@ fun fooBar()
 
 fun barFoo() -> Void {}
 ```
-De forma opcional se le puede añadir un comentario "inline" en la función para documentarla, o especificar los tipos de entrada y salida
-aún no se ha implementado un "typechecker" con lo que los tipos se pueden usar como anotaciones.
+De forma opcional se le puede añadir un comentario "inline" en la función para documentarla, o especificar los tipos de entrada y salida.
+Aún no se ha implementado un "typechecker" con lo que los tipos se pueden usar como anotaciones.
 
 ```
 fun add(a:Int b:Int) -> Int {
@@ -61,7 +61,7 @@ constant "constant"
     = LET paramType ASSIGN expr
 ```
 
-Las anotaciones de parámetros se indican con el nombre identificado seguido de su tipo, el cual es opcional.
+Las anotaciones de parámetros se indican con el nombre identificador seguido de su tipo, el cual es opcional.
 ```haskell
 paramType = _ NAMEID (DOTS TYPE)? _
 
